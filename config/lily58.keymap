@@ -15,7 +15,7 @@
 #define NAVI 3
 #define MARK LC(SPACE)
 #define BTS(n) &bt BT_SEL n
-#define LANG LGUI(SPACE)
+#define LANG LG(SPACE)
 
 / {
 	keymap {
