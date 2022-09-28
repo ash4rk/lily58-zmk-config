@@ -73,15 +73,15 @@
 		navi_layer {
 // ----------------------------------------------------------------------------------------------------
 // | F1  | F2   | F3  | F4  | F5  |  F6   |                    | OUT_T |       |      |     |     |     |
-// | TAB | F7   | F8  | F9  | F10 |  F11  |                    | HOME  | PGDN  | PGUP | END | PSCR|PAUSE|
-// | F12 |META+1|     |     |     |       |                    | LEFT  | DOWN  |  UP  |RIGHT|BKSPC| DEL |
+// | TAB | F7   | F8  | F9  | F10 |  F11  |                    | HOME  | PGUP  |  UP  | PGDN| PSCR|PAUSE|
+// | F12 |META+1|     |     |     |       |                    |  END  | LEFT  | DOWN |RIGHT|BKSPC| DEL |
 // |TILDE|      |     |     |     |META+0 |        |  | BT CLR | VOLDN | PREV  |  PP  | NEXT|VOLUP|     |
 //                    |     |     |       |        |  |        |       |       |      |
 			bindings = <
  
 &kp F1    &kp F2 &kp F3 &kp F4   &kp F5   &kp F6                       &out OUT_TOG  &trans     &trans           &trans     &trans        &trans
-&kp TAB   &kp F7 &kp F8 &kp F9   &kp F10  &kp F11                      &kp HOME      &kp PG_DN  &kp PG_UP        &kp END    &kp PSCRN     &kp PAUSE_BREAK
-&kp F12   MN(N1) MN(N2) MN(N3)   MN(N4)   MN(N5)                       &kp LEFT      &kp DOWN   &kp UP           &kp RIGHT  &kp BSPC      &kp DEL
+&kp TAB   &kp F7 &kp F8 &kp F9   &kp F10  &kp F11                      &kp HOME      &kp PG_UP  &kp UP           &kp PG_DN  &kp PSCRN     &kp PAUSE_BREAK
+&kp F12   MN(N1) MN(N2) MN(N3)   MN(N4)   MN(N5)                       &kp END       &kp LEFT   &kp DOWN         &kp RIGHT  &kp BSPC      &kp DEL
 &kp TILDE MN(N6) MN(N7) MN(N8)   MN(N9)   MN(N0)   &trans   &bt BT_CLR &kp C_VOL_DN  &kp K_PREV &kp K_PLAY_PAUSE &kp K_NEXT &kp C_VOL_UP  &trans
                         &trans   &trans   &trans   &trans   &trans     &trans        &trans     &trans
 			>;
