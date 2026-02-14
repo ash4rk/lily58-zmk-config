@@ -21,11 +21,11 @@ include:
     shield: kyria_left
   - board: nice_nano
     shield: kyria_right
-  - board: bluemicro840
+  - board: bluemicro840_v1
     shield: kyria_left
-  - board: bluemicro840
+  - board: bluemicro840_v1
     shield: kyria_right
   - board: nice_nano
     shield: settings_reset
-  - board: bluemicro840
+  - board: bluemicro840_v1
     shield: settings_reset
