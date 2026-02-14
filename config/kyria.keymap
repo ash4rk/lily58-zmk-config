@@ -13,7 +13,7 @@
 #define SPEC 1
 #define NUMS 2
 #define NAVI 3
-#define LANG LG(SPACE)
+#define LANG CLCK
 #define BTS(n) &bt BT_SEL n
 #define MN(n) &kp LG n
 
@@ -23,14 +23,14 @@
 
 		default_layer {
 // -----------------------------------------------------------------------------------------------------------
-// | ESC   |  Q  |  W  |  E  |  R  |  T   |                             |  Y  |  U   |  I  |  O  |  P  | ENTER |
-// | CTRL  |  A  |  S  |  D  |  F  |  G   |                             |  H  |  J   |  K  |  L  |  ;  |   '   |
-// | SHIFT |  Z  |  X  |  C  |  V  |  B   |      |     | |      |       |  N  |  M   |  ,  |  .  |  /  |   \   |
-//                     | ROT | GUI | SPEC | NAVI | ALT | | NUMS | SHIFT | SPC | LANG | ROT |
+// | ESC   |  Q  |  W  |  E  |  R  |  T   |                             |  Y  |  U   |  I  |  O  |  P  |  BSPC |
+// | CTRL  |  A  |  S  |  D  |  F  |  G   |                             |  H  |  J   |  K  |  L  |  ;  | ENTER |
+// | SHIFT |  Z  |  X  |  C  |  V  |  B   | LANG |     | |      |       |  N  |  M   |  ,  |  .  |  /  |   \   |
+//                     | LGUI| LALT| SPACE| NAVI | ALT | | NUMS | SHIFT | SPC | LANG | ROT |
 			bindings = <
-&kp ESC   &kp Q  &kp W  &kp E  &kp R    &kp T                                            &kp Y     &kp U    &kp I     &kp O   &kp P     &kp ENTER
-&kp LCTRL &kp A  &kp S  &kp D  &kp F    &kp G                                            &kp H     &kp J    &kp K     &kp L   &kp SEMI  &kp SQT
-&kp LSHFT &kp Z  &kp X  &kp C  &kp V    &kp B    &none    &none     &none     &none      &kp N     &kp M    &kp COMMA &kp DOT &kp SLASH &kp BACKSLASH
+&kp ESC   &kp Q  &kp W  &kp E  &kp R    &kp T                                            &kp Y     &kp U    &kp I     &kp O   &kp P     &kp BSPC
+&kp LCTRL &kp A  &kp S  &kp D  &kp F    &kp G                                            &kp H     &kp J    &kp K     &kp L   &kp SEMI  &kp ENTER
+&kp LSHFT &kp Z  &kp X  &kp C  &kp V    &kp B    &kp LANG &none     &none     &none      &kp N     &kp M    &kp COMMA &kp DOT &kp SLASH &kp BACKSLASH
                         &none  &kp LGUI &mo SPEC &mo NAVI &kp LALT  &mo NUMS  &kp LSHFT  &kp SPACE &kp LANG &none
 			>;
 
@@ -42,8 +42,6 @@
 // ------------------------------------------------------------------------------------------------------
 // |  1  |  2  |  3  |  4  |  5  |   6   |                      |   7   |   8   |  9  |  0  |  _  |  =  |
 // |  !  |  @  |  #  |  $  |  %  |   ^   |                      |   &   |   *   |  (  |  )  |  -  |  |  |
-// |     |     |  ~  |  "  |  '  |   `   |    |    |  |    |    |   +   |   {   |  [  |  ]  |  }  |     |
-//                   |     |     |       |    |    |  |    |    |       |       |     |
 			bindings = <
 &kp N1   &kp N2  &kp N3    &kp N4     &kp N5    &kp N6                                  &kp N7    &kp N8    &kp N9    &kp N0    &kp UNDER  &kp EQUAL
 &kp EXCL &kp AT  &kp HASH  &kp DOLLAR &kp PRCNT &kp CARET                               &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR  &kp MINUS  &kp PIPE
@@ -70,13 +68,13 @@
 
 		navi_layer {
 // ----------------------------------------------------------------------------------------------------
-// | TAB  |     |     |      | INS |  ё  |                               | HOME  | PGDN | PGUP | END | PSCR|PAUSE|
-// |META+1|     |     |      |     |     |                               | LEFT  | DOWN |  UP  |RIGHT|BKSPC| DEL |
-// |      |     |     |META+0| F11 | F12 | BT1 | BT2 |  | BT CLR | OUT_T | VOLDN | PREV |  PP  | NEXT|VOLUP|     |
+// | TAB  |     |     |      | INS |  ё  |                               | PG_UP  | HOME | UP   | END | PSCR|PAUSE|
+// |META+1|     |     |      |     |     |                               | PG_DN  | LEFT | DOWN |RIGHT|BKSPC| DEL |
+// |      |     |     |META+0| F11 | F12 | BT1 | BT2 |  | BT CLR | OUT_T | VOLDN | PREV |  PP  | NEXT |VOLUP|     |
 //                    |      |     |     |     |     |  |        |       |       |      |
 			bindings = <
-&kp TAB &trans &trans &trans   &kp INS  &kp TILDE                                       &kp HOME      &kp PG_DN  &kp PG_UP        &kp END    &kp PSCRN     &kp PAUSE_BREAK
-MN(N1)  MN(N2) MN(N3) MN(N4)   MN(N5)   MN(N6)                                          &kp LEFT      &kp DOWN   &kp UP           &kp RIGHT  &kp BSPC      &kp DEL
+&kp TAB &trans &trans &trans   &kp INS  &kp TILDE                                       &kp PG_UP      &kp HOME  &kp UP        &kp END    &kp PSCRN     &kp PAUSE_BREAK
+MN(N1)  MN(N2) MN(N3) MN(N4)   MN(N5)   MN(N6)                                          &kp PG_DN      &kp LEFT   &kp DOWN      &kp RIGHT  &kp BSPC      &kp DEL
 MN(N7)  MN(N8) MN(N9) MN(N0)   &kp F11  &kp F12  BTS(0) BTS(1)  &bt BT_CLR &out OUT_TOG &kp C_VOL_DN  &kp K_PREV &kp K_PLAY_PAUSE &kp K_NEXT &kp C_VOL_UP  &trans
                       &trans   &trans   &trans   &trans &trans  &trans     &trans       &trans        &trans     &trans
 			>;
