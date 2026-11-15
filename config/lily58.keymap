@@ -65,7 +65,7 @@
 // |      |     |     |     |     |       |        |  |        |       |       |     |     |     |     |
 //                    |     |     |       |        |  |        |       |       |     |
 			bindings = <
-&bt BT_CLR   BTS(0)   BTS(1)   BTS(2)   BTS(3)   BTS(3)                      &kp C_VOL_DN  &kp C_VOL_UP  &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &trans
+&bt BT_CLR   BTS(0)   BTS(1)   BTS(2)   BTS(3)   BTS(4)                      &kp C_VOL_DN  &kp C_VOL_UP  &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &trans
 &out OUT_TOG &trans   &trans   &trans   &trans   &trans                       &trans        &trans        &trans      &trans            &trans     &trans
 &trans       &trans   &trans   &trans   &trans   &trans                       &trans        &trans        &trans      &trans            &trans     &trans
 &trans       &trans   &trans   &trans   &trans   &trans   &trans    &trans    &trans        &trans        &trans      &trans            &trans     &trans
