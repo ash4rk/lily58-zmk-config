@@ -59,14 +59,14 @@
 		nums_layer {
 // actually system specific layer (bluetooth, usb/ble toggle, audio control)
 // ----------------------------------------------------------------------------------------------------
-// |BT_CLR| BT_0| BT_1| BT_2| BT_3|  BT_4 |                    | VOL DN| VOL UP| PREV| PP  | NEXT|     |
-// |OUT_T |     |     |     |     |       |                    |       |       |     |     |     |     |
+// |BT_CLR| BT_0| BT_1| BT_2| BT_3|  BT_4 |                    | VOL DN| VOL UP| PREV| PP  | NEXT| MUTE|
+// |OUT_T |     |     |     |     |       |                    | BRI DN| BRI UP|     |     |     |     |
 // |      |     |     |     |     |       |                    |       |       |     |     |     |     |
 // |      |     |     |     |     |       |        |  |        |       |       |     |     |     |     |
 //                    |     |     |       |        |  |        |       |       |     |
 			bindings = <
-&bt BT_CLR   BTS(0)   BTS(1)   BTS(2)   BTS(3)   BTS(4)                      &kp C_VOL_DN  &kp C_VOL_UP  &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &trans
-&out OUT_TOG &trans   &trans   &trans   &trans   &trans                       &trans        &trans        &trans      &trans            &trans     &trans
+&bt BT_CLR   BTS(0)   BTS(1)   BTS(2)   BTS(3)   BTS(4)                      &kp C_VOL_DN  &kp C_VOL_UP  &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &kp C_MUTE
+&out OUT_TOG &trans   &trans   &trans   &trans   &trans                       &kp C_BRI_DN  &kp C_BRI_UP  &trans      &trans            &trans     &trans
 &trans       &trans   &trans   &trans   &trans   &trans                       &trans        &trans        &trans      &trans            &trans     &trans
 &trans       &trans   &trans   &trans   &trans   &trans   &trans    &trans    &trans        &trans        &trans      &trans            &trans     &trans
                                &trans   &trans   &trans   &trans    &trans    &trans        &trans        &trans
