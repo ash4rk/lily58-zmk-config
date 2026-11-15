@@ -35,7 +35,7 @@
 &kp GRAVE &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                          &kp N6    &kp N7    &kp N8    &kp N9  &kp N0    &kp BSPC
 &kp ESC   &kp Q  &kp W  &kp E    &kp R    &kp T                           &kp Y     &kp U     &kp I     &kp O   &kp P     &kp ENTER
 &kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                           &kp H     &kp J     &kp K     &kp L   &kp SEMI  &kp SQT
-&kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B     &kp LANG   &mo MARK   &kp N     &kp M     &kp COMMA &kp DOT &kp SLASH &kp BACKSLASH
+&kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B     &kp LANG   &mo NUMS   &kp N     &kp M     &kp COMMA &kp DOT &kp SLASH &kp BACKSLASH
                         &kp LGUI &kp LALT &kp SPACE &mo NAVI   &mo NAVI   &mo SPEC  &kp LBRC  &kp RBKT
 			>;
 		};
@@ -57,35 +57,36 @@
 		};
 
 		nums_layer {
+// actually system specific layer (bluetooth, usb/ble toggle, audio control)
 // ----------------------------------------------------------------------------------------------------
-// |     |     |     |     |     |       |                    |       |       |     |     |     |     |
-// |     |     |     |     |     |       |                    |       |       |     |     |     |     |
-// |     |     |     |     |     |       |                    |       |       |     |     |     |     |
-// |     |     |     |     |     |       |        |  |        |       |       |     |     |     |     |
-//                   |     |     |       |        |  |        |       |       |     |
+// |BT_CLR| BT_0| BT_1| BT_2| BT_3|  BT_4 |                    | VOL DN| VOL UP| PREV| PP  | NEXT|     |
+// |OUT_T |     |     |     |     |       |                    |       |       |     |     |     |     |
+// |      |     |     |     |     |       |                    |       |       |     |     |     |     |
+// |      |     |     |     |     |       |        |  |        |       |       |     |     |     |     |
+//                    |     |     |       |        |  |        |       |       |     |
 			bindings = <
-&kp N1 &trans &trans &trans   &trans   &trans                       &trans     &trans   &trans     &trans  &trans    &trans
-&trans &trans &trans &trans   &trans   &trans                       &trans     &trans   &trans     &trans  &trans    &trans
-&trans &trans &trans &trans   &trans   &trans                       &trans     &trans   &trans     &trans  &trans    &trans
-&trans &trans &trans &trans   &trans   &trans   &trans    &trans    &trans     &trans   &trans     &trans  &trans    &trans
-                     &trans   &trans   &trans   &trans    &trans    &trans     &trans   &trans
+&bt BT_CLR   BTS(0)   BTS(1)   BTS(2)   BTS(3)   BTS(3)                      &kp C_VOL_DN  &kp C_VOL_UP  &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &trans
+&out OUT_TOG &trans   &trans   &trans   &trans   &trans                       &trans        &trans        &trans      &trans            &trans     &trans
+&trans       &trans   &trans   &trans   &trans   &trans                       &trans        &trans        &trans      &trans            &trans     &trans
+&trans       &trans   &trans   &trans   &trans   &trans   &trans    &trans    &trans        &trans        &trans      &trans            &trans     &trans
+                               &trans   &trans   &trans   &trans    &trans    &trans        &trans        &trans
 			>;
 		};
 
 		navi_layer {
 // ----------------------------------------------------------------------------------------------------
-// | F1  | F2   | F3  | F4  | F5  |  F6   |                    | OUT_T |       |      |     |       | BSPC |
+// | F1  | F2   | F3  | F4  | F5  |  F6   |                    |       |       |      |     |       | BSPC |
 // | TAB | F7   | F8  | F9  | F10 |  F11  |                    | PGUP  | HOME  |  UP  | END | PSCR  | DEL  |
 // | F12 |META+1|     |     |     |       |                    | PGDN  | LEFT  | DOWN |RIGHT| PAUSE |      |
-// |TILDE|      |     |     |     |META+0 |  PTAB  |  |  NTAB  | VOLDN | PREV  |  PP  | NEXT|VOLUP  |      |
+// |TILDE|      |     |     |     |META+0 |  PTAB  |  |  NTAB  |       |       |      |     |       |      |
 //                    |     |     |       |        |  |        |       |       |      |
 			bindings = <
  
-&kp F1    &kp F2 &kp F3 &kp F4       &kp F5        &kp F6                           &out OUT_TOG  &trans        &trans            &trans           &trans            &kp BSPC
+&kp F1    &kp F2 &kp F3 &kp F4       &kp F5        &kp F6                           &trans        &trans        &trans            &trans           &trans            &kp BSPC
 &kp TAB   &kp F7 &kp F8 &kp F9       &kp F10       &kp F11                          &kp PG_UP     &kp HOME      &kp UP            &kp END          &kp PSCRN         &kp DEL
 &kp F12   MN(N1) MN(N2) MN(N3)       MN(N4)        MN(N5)                           &kp PG_DN     &kp LEFT      &kp DOWN          &kp RIGHT        &kp PAUSE_BREAK   &trans
-&kp TILDE MN(N6) MN(N7) MN(N8)       MN(N9)        MN(N0)      &kp PTAB  &kp NTAB   &kp C_VOL_DN  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT       &kp C_VOL_UP      &trans
-                        &bt BT_CLR   BTS(0)        BTS(1)      &trans    &trans     BTS(2)        BTS(3)        BTS(4)
+&kp TILDE MN(N6) MN(N7) MN(N8)       MN(N9)        MN(N0)      &kp PTAB  &kp NTAB   &trans        &trans        &trans            &trans           &kp trans         &trans
+                        &trans       &trans        &trans      &trans    &trans     &trans        &trans        &trans
 			>;
 		};
   };
